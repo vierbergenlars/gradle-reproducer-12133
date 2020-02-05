@@ -7,8 +7,6 @@ public class InstallAmpsInWarTask extends AbstractInjectFilesInWarTask {
 
     @TaskAction
     public void injectFiles() {
-        // Configure labels
-        configureLabels();
         if (getSourceFiles().isEmpty()) {
             throw new GradleException();
         }

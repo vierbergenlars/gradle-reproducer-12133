@@ -1,8 +1,6 @@
 package be.vbgn.gradle.reproducer.tasks;
 
 
-import java.io.File;
-import java.util.stream.Collectors;
 import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.SkipWhenEmpty;
@@ -24,6 +22,4 @@ abstract class AbstractInjectFilesInWarTask extends AbstractWarEnrichmentTask {
         sourceFiles.setFrom(files);
     }
 
-    protected void configureLabels() {
-    }
 }

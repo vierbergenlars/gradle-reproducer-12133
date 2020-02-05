@@ -14,18 +14,10 @@ public abstract class AbstractWarEnrichmentTask extends DefaultTask implements W
      */
     private RegularFileProperty inputWar = getProject().getObjects().fileProperty();
 
-    private MapProperty<String, String> labels = getProject().getObjects().mapProperty(String.class, String.class)
-            .empty();
-
     @InputFile
     @Override
     public RegularFileProperty getInputWar() {
         return inputWar;
-    }
-
-    @Override
-    public void withLabels(Provider<Map<String, String>> labels) {
-        this.labels.putAll(labels);
     }
 
 }
