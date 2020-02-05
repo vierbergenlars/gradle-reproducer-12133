@@ -1,0 +1,13 @@
+plugins {
+    id "java"
+}
+import be.vbgn.gradle.reproducer.ReproducerPlugin
+apply plugin: ReproducerPlugin
+
+repositories {
+    gradlePluginPortal()
+}
+
+dependencies {
+    alfrescoAmp "be.vbgn.gradle:ci-detect-plugin:0.3.0"
+}
