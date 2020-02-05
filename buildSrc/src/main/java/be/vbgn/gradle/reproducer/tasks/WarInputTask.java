@@ -16,8 +16,4 @@ public interface WarInputTask extends Task {
         getInputWar().set(configuration::getSingleFile);
     }
 
-    default void setInputWar(WarOutputTask task) {
-        getInputWar().set(task.getOutputWar());
-    }
-
 }

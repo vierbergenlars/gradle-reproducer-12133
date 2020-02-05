@@ -17,8 +17,4 @@ public interface LabelConsumerTask extends Task {
         withLabels(getProject().provider(() -> labels));
     }
 
-    default void withLabels(LabelSupplierTask task) {
-        dependsOn(task);
-        withLabels(task.getLabels());
-    }
 }

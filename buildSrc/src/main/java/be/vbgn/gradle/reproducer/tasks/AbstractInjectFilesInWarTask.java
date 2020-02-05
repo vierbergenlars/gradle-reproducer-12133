@@ -25,11 +25,5 @@ abstract class AbstractInjectFilesInWarTask extends AbstractWarEnrichmentTask {
     }
 
     protected void configureLabels() {
-        String injectedFiles = getSourceFiles()
-                .getFiles()
-                .stream()
-                .map(File::getName)
-                .collect(Collectors.joining(", "));
-        getLabels().put(getName(), injectedFiles);
     }
 }
