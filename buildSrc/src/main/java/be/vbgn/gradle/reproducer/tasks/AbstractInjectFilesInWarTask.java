@@ -4,7 +4,6 @@ package be.vbgn.gradle.reproducer.tasks;
 import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.internal.AbstractTask;
 import org.gradle.api.tasks.InputFiles;
-import org.gradle.api.tasks.SkipWhenEmpty;
 
 abstract class AbstractInjectFilesInWarTask extends AbstractTask {
 
@@ -14,7 +13,6 @@ abstract class AbstractInjectFilesInWarTask extends AbstractTask {
     private final ConfigurableFileCollection sourceFiles = getProject().files();
 
     @InputFiles
-    @SkipWhenEmpty
     public ConfigurableFileCollection getSourceFiles() {
         return sourceFiles;
     }

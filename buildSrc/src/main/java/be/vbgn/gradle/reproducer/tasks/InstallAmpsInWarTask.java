@@ -8,7 +8,7 @@ public class InstallAmpsInWarTask extends AbstractInjectFilesInWarTask {
     @TaskAction
     public void injectFiles() {
         if (getSourceFiles().isEmpty()) {
-            throw new GradleException();
+            throw new GradleException("sourceFiles are unexpectedly empty");
         }
     }
 }
