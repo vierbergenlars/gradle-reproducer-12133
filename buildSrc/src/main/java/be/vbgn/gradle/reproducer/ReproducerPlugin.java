@@ -11,7 +11,6 @@ public class ReproducerPlugin implements Plugin<Project> {
         target.getConfigurations().create("alfrescoAmp");
         InstallAmpsInWarTask task = target.getTasks().create("applyAlfrescoAmp", InstallAmpsInWarTask.class, concreteTask -> {
             concreteTask.setSourceFiles(target.getConfigurations().getByName("alfrescoAmp"));
-            concreteTask.setInputWar(target.files("build.gradle"));
         });
         System.out.println(task);
     }
